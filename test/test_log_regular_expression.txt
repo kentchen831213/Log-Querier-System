@@ -1,0 +1,106 @@
+rare
+
+grep '"http://paul.info/posts/categories/author.htm" "Mozilla/5.0' -c
+ 0 (vm1)
+ 0 (vm2)
+ 0 (vm3)
+ 1 (vm4)
+ 0 (vm5)
+
+
+we totally run 5 time for this command and average time to get result is:
+
+multi thread with no regular expression
+ (0.049+0.042+0.042+0.041+0.039)//5 = 0.042(sec) 
+
+ multi thread with regular expression
+ (0.049+0.042+0.048+0.047+0.048)//5 = 0.046(sec)
+
+
+ ----------------------------------------------------------------------------------------------
+ lessfre
+ grep 'sawyer.com' -c 
+ 82 (vm1)
+ 70 (vm2)
+ 87 (vm3)
+ 84 (vm4)
+ 77 (vm5)
+ 65 (vm6)
+ 67 (vm7)
+ 79 (vm8)
+ 55 (vm9)
+ 54 (vm10)
+
+we totally run 5 time for this command and average time to get result is:
+
+multi thread with no regular expression
+(0.083+0.080+0.076+0.067+0.079)//5 = 0.077(sec) 
+
+
+multi thread with regular expression
+(0.079+0.067+0.076+0.080+0.083)//5 = 0.077(sec) 
+-------------------------------------------------------------------------------------------------------------------
+median
+
+grep '156' -c
+
+4408 (vm1)
+4210 (vm2)
+4436 (vm3)
+4257 (vm4)
+4340 (vm5)
+
+
+we totally run 5 time for this command and average time to get result is:
+
+multi thread with no regular expression
+ (0.086+0.076+0.065+0.075+0.073)//5 = 0.075(sec) 
+
+
+multi thread with regular expression
+ (0.32+0.31+0.31+0.32+0.33)//5 = 0.33(sec) 
+
+--------------------------------------------------------------------------------------------------------------------
+grep 'Aug' -Ec 
+ 23644
+ 23733
+ 23578
+ 23717
+ 23743
+ 23595
+ 23615
+ 23792
+ 23691
+ 23560
+  
+
+we totally run 5 time for this command and average time to get result is:
+
+
+multi thread with no regular expression:
+ (0.055+0.05+0.05+0.047+0.051)//5 = 0.051(sec) 
+
+ 
+multi thread with regular expression:
+ (0.094+0.10+0.093+0.095+0.101)//5 = 0.096(sec) 
+
+
+--------------------------------------------------------------------------------------------
+mostfre
+
+grep '.com' -c
+
+176215 (vm1)
+166375 (vm2)
+166628 (vm3)
+167602 (vm4)
+168172 (vm5)
+
+
+multi thread with no regular expression:
+ (0.11+0.12+0.12+0.11+0.10)//5 = 0.11(sec) 
+
+multi thread with regular expression:
+
+ (0.65+0.67+0.69+0.58+0.51)//5 = 0.62(sec) 
+

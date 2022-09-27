@@ -1,0 +1,20 @@
+ grep '"http://paul.info/posts/categories/author.htm" "Mozilla/5.0' -c
+ 0 (vm1)
+ 0 (vm2)
+ 0 (vm3)
+ 1 (vm4)
+ 0 (vm5)
+ 0 (vm6)
+ 0 (vm7)
+ 0 (vm8)
+ 0 (vm9)
+ 0 (vm10)
+  
+
+we totally run 5 time for this command and average time to get result is:
+
+single thread
+ (0.20+0.15+0.15+0.16+0.16)//5 = 0.16(sec) 
+
+multi thread:
+ (0.049+0.042+0.042+0.041+0.039)//5 = 0.042(sec) 

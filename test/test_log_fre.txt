@@ -1,0 +1,21 @@
+ grep 'Aug' -Ec 
+ 23644
+ 23733
+ 23578
+ 23717
+ 23743
+ 23595
+ 23615
+ 23792
+ 23691
+ 23560
+  
+
+
+we totally run 5 time for this command and average time to get result is:
+single thread:
+(0.22+0.18+0.22+0.18+0.18)//5 = 0.19(sec) 
+
+
+multithread: 
+ (0.055+0.05+0.05+0.047+0.051)//5 = 0.051(sec) 
